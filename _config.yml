@@ -1,0 +1,42 @@
+title: Cryptography From First Principles
+description: Building cryptographic machinery from elementary number theory and executable C++.
+url: ""
+baseurl: "/cryptography-from-first-principles"
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  # GitHub Pages uses Kramdown's MathJax formatter. KaTeX renders the
+  # resulting \(...\) and \[...\] delimiters in the browser.
+  math_engine: mathjax
+
+collections:
+  part1:
+    output: true
+    permalink: /part-1/:name/
+  proofs:
+    output: true
+    permalink: /proofs/:path/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: part1
+    values:
+      section: part-1
+  - scope:
+      path: ""
+      type: proofs
+    values:
+      section: proofs
+
+exclude:
+  - build
+  - Gemfile
+  - Gemfile.lock
+  - tmp
+  - vendor

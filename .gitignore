@@ -1,0 +1,9 @@
+tmp/
+build/
+.idea/
+_site/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+*.swp
+cmake-build-debug

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" integrity="sha384-cMkvdD8LoxVzGF/RPUKAcvmm49FQ0oxwDF3BGKtDXcEc+T1b2N+teh/OJfpU0jr6" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous" onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false},{left:'$',right:'$',display:false}],throwOnError:false});"></script>
+    <style>
+      :root { color-scheme: light dark; --paper:#fff; --ink:#20242a; --muted:#626a73; --accent:#3157a4; --line:#d8dee4; }
+      @media (prefers-color-scheme:dark) { :root { --paper:#111418; --ink:#e6edf3; --muted:#9da7b1; --accent:#8ab4f8; --line:#30363d; } }
+      * { box-sizing:border-box; } body { margin:0; background:var(--paper); color:var(--ink); font:17px/1.7 system-ui,sans-serif; }
+      .shell { display:grid; grid-template-columns:18rem minmax(0,52rem); gap:3rem; max-width:76rem; margin:auto; padding:2rem; }
+      nav { position:sticky; top:2rem; align-self:start; } nav a { display:block; padding:.22rem 0; color:var(--muted); } nav h2 { font-size:1rem; }
+      main { min-width:0; } a { color:var(--accent); } pre { overflow:auto; padding:1rem; border:1px solid var(--line); border-radius:.4rem; }
+      code { font-size:.9em; } table { display:block; overflow:auto; border-collapse:collapse; } th,td { padding:.5rem; border:1px solid var(--line); }
+      blockquote { margin-left:0; padding-left:1rem; border-left:.25rem solid var(--line); color:var(--muted); }
+      .kind { color:var(--muted); }
+      @media(max-width:760px){ .shell{display:block;padding:1rem} nav{position:static;border-bottom:1px solid var(--line);padding-bottom:1rem} }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <nav aria-label="Part 1 navigation">
+        <a href="{{ '/' | relative_url }}"><strong>{{ site.title }}</strong></a>
+        <h2>Part 1 — The Number Theory Engine</h2>
+        {% assign chapters = site.part1 | sort: "order" %}
+        {% for chapter in chapters %}<a href="{{ chapter.url | relative_url }}">{{ chapter.nav_title | default: chapter.title }}</a>{% endfor %}
+        <h2>Research supplements</h2>
+        <a href="{{ '/proofs/' | relative_url }}">Proofs</a>
+        <a href="{{ '/code/part-1/' | relative_url }}">Code</a>
+        <a href="{{ '/experiments/part-1/' | relative_url }}">Experiments</a>
+        <a href="{{ '/references/part-1/' | relative_url }}">References</a>
+      </nav>
+      <main>
+        {% if page.kind %}<p class="kind">{{ page.kind }}</p>{% endif %}
+        {{ content }}
+      </main>
+    </div>
+  </body>
+</html>
