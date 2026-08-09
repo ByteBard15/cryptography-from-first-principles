@@ -23,14 +23,14 @@ The project is organized as a multi-part progression. Each part introduces the m
 
 Part 1 builds the arithmetic foundation used throughout public-key cryptography. It begins with ROT13 as a small example of wraparound arithmetic and develops that observation into quotient rings, greatest-common-divisor algorithms, Bézout coefficients, modular inverses, and matrix-based Euclidean reductions.
 
-Its explainers cover:
+The complete narrative is published as a single document: [Part 1 — The Number Theory Engine](_part1/part-1.md). Its sections cover:
 
-1. [Introduction and shifting letters](_part1/01-introduction.md) — how a simple substitution cipher exposes modular structure and the inverse problem.
-2. [Modular arithmetic](_part1/02-modular-arithmetic.md) — congruence, residue classes, quotient rings, zero divisors, and multiplicative units.
-3. [The Euclidean Algorithm](_part1/03-euclidean-algorithm.md) — computing greatest common divisors without factoring and understanding the division invariant.
-4. [Binary GCD](_part1/04-binary-gcd.md) — Stein’s shift-and-subtract formulation and its relationship to machine arithmetic.
-5. [The Extended Euclidean Algorithm](_part1/05-extended-euclidean-algorithm.md) — Bézout coefficients, modular inverses, indexing conventions, and iterative state tracking.
-6. [Matrix EEA](_part1/06-matrix-eea.md) — representing Euclidean transitions with $2\times2$ matrices and motivating Lehmer and half-GCD acceleration.
+1. **Introduction and shifting letters** — how a simple substitution cipher exposes modular structure and the inverse problem.
+2. **Modular arithmetic** — congruence, residue classes, quotient rings, zero divisors, and multiplicative units.
+3. **The Euclidean Algorithm** — computing greatest common divisors without factoring and understanding the division invariant.
+4. **Binary GCD** — Stein’s shift-and-subtract formulation and its relationship to machine arithmetic.
+5. **The Extended Euclidean Algorithm** — Bézout coefficients, modular inverses, indexing conventions, and iterative state tracking.
+6. **Matrix EEA** — representing Euclidean transitions with $2\times2$ matrices and motivating Lehmer and half-GCD acceleration.
 
 ### Part 2 — From Inverses to Trapdoor Arithmetic
 
@@ -46,7 +46,7 @@ The repository separates the main reading path from the material used to support
 
 ### Explanatory articles
 
-The [`_part1/`](_part1/) collection contains the primary narrative. These chapters preserve the conversational style of the original series: developer-oriented intuition, historical context, small examples, “why should I care?” explanations, and transitions from visual reasoning to formal mathematics.
+The [`_part1/part-1.md`](_part1/part-1.md) collection document contains the complete Part 1 narrative. Its sections preserve the conversational style of the original series: developer-oriented intuition, historical context, small examples, “why should I care?” explanations, and transitions from visual reasoning to formal mathematics.
 
 ### Mathematical proofs
 
