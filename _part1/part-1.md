@@ -1,6 +1,6 @@
 ---
-title: From Shifting Letters to Modular Arithmetic
-nav_title: Part 1 — From Shifting Letters to Modular Arithmetic: The Number Theory Engine Behind RSA
+title: "From Shifting Letters to Modular Arithmetic"
+nav_title: "Part 1 — From Shifting Letters to Modular Arithmetic: The Number Theory Engine Behind RSA"
 order: 1
 permalink: /part-1/
 description: Modular arithmetic, GCD algorithms, Bézout coefficients, modular inverses, and matrix EEA.

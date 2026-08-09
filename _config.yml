@@ -1,14 +1,14 @@
-title: RSA From First Principles
-description: Building RSA from elementary number theory, precise proofs, and executable C++.
+title: "RSA From First Principles"
+description: "Building RSA from elementary number theory, precise proofs, and executable C++."
 url: ""
 baseurl: "/cryptography-from-first-principles"
-markdown: kramdown
+markdown: "kramdown"
 kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+  input: "GFM"
+  syntax_highlighter: "rouge"
   # GitHub Pages uses Kramdown's MathJax formatter. KaTeX renders the
   # resulting \(...\) and \[...\] delimiters in the browser.
-  math_engine: mathjax
+  math_engine: "mathjax"
 
 collections:
   part1:
