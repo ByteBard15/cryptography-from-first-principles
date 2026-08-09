@@ -1,6 +1,6 @@
-# Cryptography From First Principles
+# RSA From First Principles
 
-**Cryptography From First Principles** is a technical research and educational project that develops the mathematics behind modern cryptography from elementary ideas, executable algorithms, and carefully separated proofs.
+**RSA From First Principles** is a technical research and educational project that develops RSA from elementary mathematical ideas, executable algorithms, and carefully separated proofs.
 
 Modern cryptographic systems are often introduced at the point where the notation is already dense: modular exponentiation, large primes, finite fields, key pairs, signatures, and security assumptions appear all at once. This project takes the opposite route. It begins with familiar operations, asks why they work, formalizes the underlying mathematics, and follows that mathematics until recognizable cryptographic machinery emerges.
 
@@ -19,13 +19,13 @@ The result is intended to remain approachable to developers without sacrificing 
 
 The project is structured as a three-part progression from elementary number theory to RSA’s construction, deployment, and failure modes. The aim is to balance deep mathematical explanations with code-backed implementations and the security consequences of getting the details wrong.
 
-### Part 1 — The Number Theory Engine
+### Part 1 — From Shifting Letters to Modular Arithmetic
 
 **Article:** *Demystifying RSA Math: From Modular Arithmetic to Accelerated Extended Euclidean Algorithms*
 
 Part 1 builds the arithmetic engine RSA depends on. It begins with a familiar example of cyclic arithmetic and develops the tools needed to test coprimality, recover modular inverses, and perform Euclidean reductions efficiently.
 
-The complete narrative is published as [Part 1 — The Number Theory Engine](_part1/part-1.md). Its sections cover:
+The complete narrative is published as [From Shifting Letters to Modular Arithmetic](_part1/part-1.md). Its sections cover:
 
 1. **Why ancient number theory powers modern cryptography** — the motivation for building RSA’s mathematics from first principles.
 2. **Modular arithmetic foundations** — congruence, residue classes, the quotient ring $\mathbb{Z}/n\mathbb{Z}$, and multiplicative units.

@@ -1,16 +1,12 @@
 ---
-title: Part 1 — The Number Theory Engine
-nav_title: Part 1 — The Number Theory Engine
+title: From Shifting Letters to Modular Arithmetic
+nav_title: Part 1 — From Shifting Letters to Modular Arithmetic: The Number Theory Engine Behind RSA
 order: 1
 permalink: /part-1/
 description: Modular arithmetic, GCD algorithms, Bézout coefficients, modular inverses, and matrix EEA.
 ---
 
-# Part 1 — The Number Theory Engine
-
-From shifting letters to accelerated Euclidean reductions, Part 1 develops the number-theory machinery that later cryptographic constructions depend on.
-
-## From Shifting Letters to Modular Arithmetic
+# From Shifting Letters to Modular Arithmetic
 
 Every time you initiate an SSH session, send a cryptocurrency transaction, or connect over HTTPS, your system relies on mathematical concepts developed over two thousand years before the microchip.
 

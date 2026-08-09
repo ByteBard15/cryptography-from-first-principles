@@ -1,5 +1,5 @@
-title: Cryptography From First Principles
-description: Building cryptographic machinery from elementary number theory and executable C++.
+title: RSA From First Principles
+description: Building RSA from elementary number theory, precise proofs, and executable C++.
 url: ""
 baseurl: "/cryptography-from-first-principles"
 markdown: kramdown

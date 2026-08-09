@@ -3,11 +3,11 @@ title: Home
 permalink: /
 ---
 
-# Cryptography From First Principles
+# RSA From First Principles
 
-Modern cryptography can look like a wall of modular exponentiation, enormous primes, and forbidding notation. This project builds that machinery from elementary arithmetic, one proof and one executable implementation at a time.
+RSA can look like a wall of modular exponentiation, enormous primes, and forbidding notation. This project builds its machinery from elementary arithmetic, one proof and one executable implementation at a time.
 
-## Part 1 — The Number Theory Engine
+## Part 1 — From Shifting Letters to Modular Arithmetic
 
 [Read the complete Part 1 article →]({{ '/part-1/' | relative_url }})
 
