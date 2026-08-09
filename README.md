@@ -15,30 +15,48 @@ The goal is not merely to present formulas or working code. Each topic is approa
 
 The result is intended to remain approachable to developers without sacrificing the precision required by number theory and cryptographic engineering.
 
-## The series
+## The RSA series
 
-The project is organized as a multi-part progression. Each part introduces the mathematical and computational tools needed by the parts that follow.
+The project is structured as a three-part progression from elementary number theory to RSA’s construction, deployment, and failure modes. The aim is to balance deep mathematical explanations with code-backed implementations and the security consequences of getting the details wrong.
 
 ### Part 1 — The Number Theory Engine
 
-Part 1 builds the arithmetic foundation used throughout public-key cryptography. It begins with ROT13 as a small example of wraparound arithmetic and develops that observation into quotient rings, greatest-common-divisor algorithms, Bézout coefficients, modular inverses, and matrix-based Euclidean reductions.
+**Article:** *Demystifying RSA Math: From Modular Arithmetic to Accelerated Extended Euclidean Algorithms*
 
-The complete narrative is published as a single document: [Part 1 — The Number Theory Engine](_part1/part-1.md). Its sections cover:
+Part 1 builds the arithmetic engine RSA depends on. It begins with a familiar example of cyclic arithmetic and develops the tools needed to test coprimality, recover modular inverses, and perform Euclidean reductions efficiently.
 
-1. **Introduction and shifting letters** — how a simple substitution cipher exposes modular structure and the inverse problem.
-2. **Modular arithmetic** — congruence, residue classes, quotient rings, zero divisors, and multiplicative units.
-3. **The Euclidean Algorithm** — computing greatest common divisors without factoring and understanding the division invariant.
-4. **Binary GCD** — Stein’s shift-and-subtract formulation and its relationship to machine arithmetic.
-5. **The Extended Euclidean Algorithm** — Bézout coefficients, modular inverses, indexing conventions, and iterative state tracking.
-6. **Matrix EEA** — representing Euclidean transitions with $2\times2$ matrices and motivating Lehmer and half-GCD acceleration.
+The complete narrative is published as [Part 1 — The Number Theory Engine](_part1/part-1.md). Its sections cover:
 
-### Part 2 — From Inverses to Trapdoor Arithmetic
+1. **Why ancient number theory powers modern cryptography** — the motivation for building RSA’s mathematics from first principles.
+2. **Modular arithmetic foundations** — congruence, residue classes, the quotient ring $\mathbb{Z}/n\mathbb{Z}$, and multiplicative units.
+3. **The Euclidean Algorithm and Binary GCD** — computing greatest common divisors without factoring and comparing division-based and shift-based reductions.
+4. **The Extended Euclidean Algorithm and Bézout’s identity** — recovering coefficients satisfying $ax+by=\gcd(a,b)$ and using them to compute modular inverses.
+5. **Accelerating EEA** — expressing Euclidean transitions as $2\times2$ matrices and motivating Lehmer and half-GCD techniques for large operands.
+6. **C++ implementations** — executable versions of the algorithms, supported by tests, complexity analyses, and focused proofs.
 
-The planned second part builds on the Part 1 engine to study Euler’s totient function, Fermat’s little theorem, and the algebraic construction of RSA keys, encryption, and signatures. It will be added only after its articles, proofs, implementations, experiments, and references have been reviewed to the same standard as Part 1.
+### Part 2 — The Inversion Magic and RSA Architecture
 
-### Later parts
+**Article:** *Under the Hood of Asymmetric Cryptography: Modular Inverses, Euler’s Theorem, and RSA*
 
-The repository is designed to accommodate further parts without restructuring the existing material. Their scope will be documented as the research develops; no unpublished Part 2 or Part 3 article content is currently represented as complete.
+Part 2 will connect the arithmetic engine to RSA’s trapdoor structure:
+
+1. **The nature of the modular inverse** — why EEA makes inversion efficient when the required coprimality conditions hold and how hidden factorization shapes the surrounding security assumptions.
+2. **Euler’s totient theorem and Fermat’s little theorem** — the bridge to the congruence $a^{\phi(n)}\equiv1\pmod n$ under the appropriate hypotheses.
+3. **Building the trapdoor** — constructing the public key $(e,n)$ and private key $(d,n)$ from primes $p$ and $q$.
+4. **Implementation walkthrough** — educational C++ implementations of RSA key generation, encryption, and decryption, developed alongside the relevant proofs and tests.
+
+### Part 3 — Prime Generation, Applications, and Vulnerabilities
+
+**Article:** *From Primes to Exploits: How RSA Works in Practice and Where It Fails*
+
+Part 3 will take the mathematical construction into real systems and adversarial settings:
+
+1. **Generating secure primes** — probabilistic primality testing, including Miller–Rabin, and the requirements placed on randomness and candidate selection.
+2. **Real-world applications** — RSA signatures, certificate authentication, key encapsulation, and RSA’s relationship with symmetric cryptography and TLS deployments.
+3. **Low-public-exponent attacks** — how unsafe parameter choices or protocol constructions can make small $e$ values exploitable.
+4. **Poor prime generation** — reused primes, insufficient entropy, and weak random-number generators.
+5. **Malleability and padding** — why textbook RSA is unsafe and how schemes such as OAEP protect encryption against structural attacks.
+6. **From theory to defensive engineering** — connecting the number theory of Parts 1 and 2 to implementation review, protocol design, and secure operational practice.
 
 ## What the repository contains
 
@@ -76,11 +94,11 @@ The code is intentionally dependency-free and educational. It exists to make the
 
 ### Experiments and benchmarks
 
-The [`experiments/part-1/`](experiments/part-1/) material separates empirical performance questions from mathematical complexity claims. It provides a baseline for comparing word-sized Euclidean and binary GCD implementations and documents the information needed for reproducible measurements.
+The [`experiments/part-1/`](experiments/part-1/) material separates empirical performance questions from mathematical complexity claims. It provides a baseline for comparing word-sized Euclidean and binary GCD implementations and documents the information needed for reproducible measurements. Experiments remain part of the repository without occupying the primary site navigation.
 
 ### References
 
-The [Part 1 reference record](references/part-1.md) preserves the sources named by the article. References are kept separate from the narrative so that bibliographic details and unverified locators can be reviewed without obscuring the explanation.
+The project’s [references](references/part-1.md) collect the mathematical, algorithmic, and cryptographic works supporting the current article.
 
 ### Research site
 

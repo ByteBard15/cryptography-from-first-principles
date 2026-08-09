@@ -13,4 +13,4 @@ Modern cryptography can look like a wall of modular exponentiation, enormous pri
 
 The article moves through six sections: introduction, modular arithmetic, the Euclidean Algorithm, binary GCD, the Extended Euclidean Algorithm, and matrix EEA.
 
-The narrative chapters are deliberately separate from the [proof archive]({{ '/proofs/' | relative_url }}), [C++ source]({{ '/code/part-1/' | relative_url }}), [experiments]({{ '/experiments/part-1/' | relative_url }}), and [references]({{ '/references/part-1/' | relative_url }}).
+This is the first article in a three-part path from number theory to RSA architecture, prime generation, real-world deployment, and attacks. The narrative remains separate from the [proof archive]({{ '/proofs/' | relative_url }}), [C++ source]({{ '/code/part-1/' | relative_url }}), and [references]({{ '/references/part-1/' | relative_url }}).

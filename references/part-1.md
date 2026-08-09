@@ -1,54 +1,21 @@
 ---
-title: Part 1 References
+title: References
 permalink: /references/part-1/
 kind: Supplementary research material
 ---
 
-# Part 1 References
+# References
 
-This list contains **only references named in the supplied article**. The article did not provide a bibliography or resolvable reference definitions for its two “Cornell CS” links, so no URLs or missing publication metadata have been invented.
-
-<!-- TODO: VERIFY REFERENCE -->
-- Brent (2000). Cited for average-case bit-complexity analysis of binary GCD.
-
-<!-- TODO: VERIFY REFERENCE -->
-- Cohen (1993), Section 1.2. Cited for classical division-GCD correctness.
-
-<!-- TODO: VERIFY REFERENCE -->
-- Cornell CS [1]. Cited for equivalence relations and partitions; the source contains no link definition.
-
-<!-- TODO: VERIFY REFERENCE -->
-- Cornell CS [2]. Cited for equivalence classes and the quotient-ring viewpoint; the source contains no link definition.
-
-<!-- TODO: VERIFY REFERENCE -->
-- GMP Manual, Section 15.3.3. Cited for subquadratic GCD/HGCD.
-
-<!-- TODO: VERIFY REFERENCE -->
-- Hoffstein et al. (2008), Chapter 1 and Section 1.2. Cited for historical context and Bézout’s identity.
-
-<!-- TODO: VERIFY REFERENCE -->
-- Jebelean (1995). Cited for matrix GCD reduction and Lehmer acceleration.
-
-<!-- TODO: VERIFY REFERENCE -->
-- Knuth (1998), Volume 2, Section 4.5.2. Cited for Lamé’s theorem and classical GCD bit complexity.
-
-<!-- TODO: VERIFY REFERENCE -->
-- Koblitz (1994), Chapters 1–2. Cited for historical context, multiplicative units, and finite fields.
-
-<!-- TODO: VERIFY REFERENCE -->
-- Lamé (1844). Named in the algorithm summary as the source of the Euclidean step bound.
-
-<!-- TODO: VERIFY REFERENCE -->
-- Menezes et al. (1996), *Handbook of Applied Cryptography*, Algorithms 14.54 and 14.61 and Sections 14.4.2–14.4.3. Cited for binary GCD, EEA, and Lehmer-style GCD.
-
-<!-- TODO: VERIFY REFERENCE -->
-- Möller (2008). Cited for the $O(M(n)\log n)$ half-GCD result.
-
-<!-- TODO: VERIFY REFERENCE -->
-- Shoup (2008), Chapters 1–2, Section 2.2, Theorems 1.8 and 4.5. Cited for quotient rings, unit groups, Bézout’s identity, and EEA complexity.
-
-<!-- TODO: VERIFY REFERENCE -->
-- Stein (1967). Named as the origin of binary GCD.
-
-<!-- TODO: VERIFY REFERENCE -->
-- Weber (1995). Cited for matrix GCD reduction and Lehmer acceleration.
+- Brent, Richard P. (2000). “Twenty Years’ Analysis of the Binary Euclidean Algorithm.”
+- Cohen, Henri (1993). *A Course in Computational Algebraic Number Theory*, Section 1.2.
+- GNU Project. *GNU Multiple Precision Arithmetic Library Manual*, Section 15.3.3.
+- Hoffstein, Jeffrey; Pipher, Jill; and Silverman, Joseph H. (2008). *An Introduction to Mathematical Cryptography*.
+- Jebelean, Tudor (1995). “A Double-Digit Lehmer–Euclid Algorithm for Finding the GCD of Long Integers.”
+- Knuth, Donald E. (1998). *The Art of Computer Programming, Volume 2: Seminumerical Algorithms*, Section 4.5.2.
+- Koblitz, Neal (1994). *A Course in Number Theory and Cryptography*.
+- Lamé, Gabriel (1844). Analysis of the Euclidean Algorithm’s decimal-digit step bound.
+- Menezes, Alfred J.; van Oorschot, Paul C.; and Vanstone, Scott A. (1996). *Handbook of Applied Cryptography*, Algorithms 14.54 and 14.61 and Section 14.4.
+- Möller, Niels (2008). “On Schönhage’s Algorithm and Subquadratic Integer GCD Computation.”
+- Shoup, Victor (2008). *A Computational Introduction to Number Theory and Algebra*, Chapters 1–4.
+- Stein, Josef (1967). Binary GCD algorithm.
+- Weber (1995). Matrix GCD reduction and Lehmer acceleration.

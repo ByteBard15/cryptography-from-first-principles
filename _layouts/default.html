@@ -25,13 +25,10 @@
     <div class="shell">
       <nav aria-label="Part 1 navigation">
         <a href="{{ '/' | relative_url }}"><strong>{{ site.title }}</strong></a>
-        <h2>Part 1 — The Number Theory Engine</h2>
-        {% assign chapters = site.part1 | sort: "order" %}
-        {% for chapter in chapters %}<a href="{{ chapter.url | relative_url }}">{{ chapter.nav_title | default: chapter.title }}</a>{% endfor %}
+        <a href="{{ '/part-1/' | relative_url }}"><strong>Part 1 — The Number Theory Engine</strong></a>
         <h2>Research supplements</h2>
         <a href="{{ '/proofs/' | relative_url }}">Proofs</a>
         <a href="{{ '/code/part-1/' | relative_url }}">Code</a>
-        <a href="{{ '/experiments/part-1/' | relative_url }}">Experiments</a>
         <a href="{{ '/references/part-1/' | relative_url }}">References</a>
       </nav>
       <main>

@@ -1,6 +1,6 @@
 ---
 title: Part 1 — The Number Theory Engine
-nav_title: Part 1 — Full Article
+nav_title: Part 1 — The Number Theory Engine
 order: 1
 permalink: /part-1/
 description: Modular arithmetic, GCD algorithms, Bézout coefficients, modular inverses, and matrix EEA.
