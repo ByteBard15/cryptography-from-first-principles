@@ -815,25 +815,24 @@ The same code and its tests are available in the [matrix EEA source directory]({
 
 The supplementary [matrix EEA correctness proof]({{ '/proofs/part-1/matrix-eea-correctness/' | relative_url }}) proves the row-linear-combination and determinant invariants and states the quotient-stability condition needed by Lehmer batching.
 
---
+---
 
 ## Conclusion & Part 1 Summary
 
 In this first installment, we built the foundational mathematical engine that powers modern public-key cryptography:
 
-1. **Modular Arithmetic as an Algebraic System:** We transitioned from basic letter shifts to quotient rings (ℤ/Nℤ) and multiplicative groups of units (ℤ/Nℤ)^×.
-2. **Efficient GCD Computation:** We proved why gcd(a, b) = gcd(a - b, b) and showed how **Binary GCD (Stein's Algorithm)** uses hardware bit shifts and `CTZ` instructions to eliminate division overhead.
-3. **Inverses & Acceleration:** We proved **Bézout's Identity** using the Well-Ordering Principle, resolved indexing notation variants, calculated modular inverses via EEA, and demonstrated how a **2 × 2 matrix product** accelerates multi-precision arithmetic.
+1. **Modular arithmetic as an algebraic system:** We moved from basic letter shifts to the quotient ring $\mathbb{Z}/N\mathbb{Z}$ and its multiplicative group of units $(\mathbb{Z}/N\mathbb{Z})^\times$.
+2. **Efficient GCD computation:** We proved why $\gcd(a,b)=\gcd(a-b,b)$ and showed how **Binary GCD (Stein’s Algorithm)** replaces general division with parity checks, shifts, subtraction, and trailing-zero counts.
+3. **Inverses and acceleration:** We proved **Bézout’s identity** using the well-ordering principle, resolved indexing conventions, calculated modular inverses with EEA, and showed how $2\times2$ transition matrices enable Lehmer-style batching for multi-precision arithmetic.
 
 ---
 
-### What's Next in Part 2?
+### What’s next in Part 2?
 
 Now that we have the computational tools to evaluate modular inverses efficiently, we are ready to explore the trapdoor functions that protect global digital communication.
 
 In **Part 2**, we will cover:
 
-* **Euler’s Totient Function (ϕ(N))** and **Fermat’s Little Theorem**.
-* Constructing the core RSA keypair (e, d, N) from algebraic principles.
-* A production-grade implementation of RSA key generation, encryption, and digital signatures in Go.
-
+- **Euler’s totient function $\phi(N)$** and **Fermat’s little theorem**.
+- Constructing the core RSA key pair $(e,d,N)$ from algebraic principles.
+- Educational C++ implementations of RSA key generation, encryption, and digital signatures, developed alongside the relevant proofs and tests.
