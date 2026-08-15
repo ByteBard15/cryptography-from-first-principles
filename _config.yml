@@ -14,6 +14,9 @@ collections:
   part1:
     output: true
     permalink: /part-1/:name/
+  part2:
+    output: true
+    permalink: /part-2/:name/
   proofs:
     output: true
     permalink: /proofs/:path/
@@ -28,6 +31,11 @@ defaults:
       type: part1
     values:
       section: part-1
+  - scope:
+      path: ""
+      type: part2
+    values:
+      section: part-2
   - scope:
       path: ""
       type: proofs

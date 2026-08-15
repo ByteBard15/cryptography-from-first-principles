@@ -823,12 +823,13 @@ In this first installment, we built the foundational mathematical engine that po
 
 ---
 
-### What’s next in Part 2?
+### Continue to Part 2
 
 Now that we have the computational tools to evaluate modular inverses efficiently, we are ready to explore the trapdoor functions that protect global digital communication.
 
-In **Part 2**, we will cover:
+In [**Part 2: Constructing the Trapdoor**]({{ '/part-2/' | relative_url }}), we cover:
 
-- **Euler’s totient function $\phi(N)$** and **Fermat’s little theorem**.
-- Constructing the core RSA key pair $(e,d,N)$ from algebraic principles.
-- Educational C++ implementations of RSA key generation, encryption, and digital signatures, developed alongside the relevant proofs and tests.
+- Why efficient modular inversion makes multiplication reversible but not asymmetric.
+- Multiplicative order, **Euler’s totient function $\phi(N)$**, **Carmichael’s function $\lambda(N)$**, and **Fermat’s little theorem**.
+- Constructing the RSA exponent pair and factorization trapdoor from $N=pq$.
+- Proving RSA correct for every residue and deriving CRT-optimized private-key operations.

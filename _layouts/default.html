@@ -23,13 +23,16 @@
   </head>
   <body>
     <div class="shell">
-      <nav aria-label="Part 1 navigation">
+      <nav aria-label="Research navigation">
         <a href="{{ '/' | relative_url }}"><strong>{{ site.title }}</strong></a>
+        <h2>Articles</h2>
         <a href="{{ '/part-1/' | relative_url }}"><strong>Part 1 — From Shifting Letters to Modular Arithmetic: The Number Theory Engine Behind RSA</strong></a>
+        <a href="{{ '/part-2/' | relative_url }}"><strong>Part 2: Constructing the Trapdoor</strong></a>
         <h2>Research supplements</h2>
         <a href="{{ '/proofs/' | relative_url }}">Proofs</a>
-        <a href="{{ '/code/part-1/' | relative_url }}">Code</a>
-        <a href="{{ '/references/part-1/' | relative_url }}">References</a>
+        <a href="{{ '/code/part-1/' | relative_url }}">Part 1 code</a>
+        <a href="{{ '/references/part-1/' | relative_url }}">Part 1 references</a>
+        <a href="{{ '/references/part-2/' | relative_url }}">Part 2 references</a>
       </nav>
       <main>
         {% if page.kind %}<p class="kind">{{ page.kind }}</p>{% endif %}

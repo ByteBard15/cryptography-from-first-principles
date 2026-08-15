@@ -34,16 +34,18 @@ The complete narrative is published as [From Shifting Letters to Modular Arithme
 5. **Accelerating EEA** — expressing Euclidean transitions as $2\times2$ matrices and motivating Lehmer and half-GCD techniques for large operands.
 6. **C++ implementations** — executable versions of the algorithms, supported by tests, complexity analyses, and focused proofs.
 
-### Part 2 — The Inversion Magic and RSA Architecture
+### Part 2: Constructing the Trapdoor
 
-**Article:** *Under the Hood of Asymmetric Cryptography: Modular Inverses, Euler’s Theorem, and RSA*
+**Article:** *Constructing the Trapdoor*
 
-Part 2 will connect the arithmetic engine to RSA’s trapdoor structure:
+Part 2 connects the arithmetic engine to RSA’s trapdoor structure. The complete narrative is published as [Constructing the Trapdoor](_part2/part-2.md). Its sections cover:
 
-1. **The nature of the modular inverse** — why EEA makes inversion efficient when the required coprimality conditions hold and how hidden factorization shapes the surrounding security assumptions.
-2. **Euler’s totient theorem and Fermat’s little theorem** — the bridge to the congruence $a^{\phi(n)}\equiv1\pmod n$ under the appropriate hypotheses.
-3. **Building the trapdoor** — constructing the public key $(e,n)$ and private key $(d,n)$ from primes $p$ and $q$.
-4. **Implementation walkthrough** — educational C++ implementations of RSA key generation, encryption, and decryption, developed alongside the relevant proofs and tests.
+1. **Why multiplication fails to create asymmetry** — the public multiplier and modulus also expose the inverse through EEA.
+2. **From exponentiation to a universal exponent** — multiplicative order, Euler’s totient function, Euler’s theorem, and the distinction between $\phi(N)$ and Carmichael’s $\lambda(N)$.
+3. **Building the factorization trapdoor** — constructing $N=pq$, deriving the exponent pair, and distinguishing the mathematical private exponent from production private-key material.
+4. **Proving RSA correct** — the unit-only Euler argument, the non-unit obstruction, Fermat’s little theorem modulo $p$ and $q$, and CRT reconstruction.
+5. **Making private-key operations faster** — RSA-CRT decomposition and the source of its approximate fourfold speedup under the article’s schoolbook multiplication model.
+6. **Separating correctness from security** — why a correct decryption proof does not prove that RSA inversion or integer factorization is hard.
 
 ### Part 3 — Prime Generation, Applications, and Vulnerabilities
 
@@ -64,7 +66,7 @@ The repository separates the main reading path from the material used to support
 
 ### Explanatory articles
 
-The [`_part1/part-1.md`](_part1/part-1.md) collection document contains the complete Part 1 narrative. Its sections preserve the conversational style of the original series: developer-oriented intuition, historical context, small examples, “why should I care?” explanations, and transitions from visual reasoning to formal mathematics.
+The [`_part1/part-1.md`](_part1/part-1.md) and [`_part2/part-2.md`](_part2/part-2.md) collection documents contain the published narratives. Their sections preserve the conversational style of the original series: developer-oriented intuition, historical context, small examples, “why should I care?” explanations, and transitions from visual reasoning to formal mathematics.
 
 ### Mathematical proofs
 
@@ -98,7 +100,7 @@ The [`experiments/part-1/`](experiments/part-1/) material separates empirical pe
 
 ### References
 
-The project’s [references](references/part-1.md) collect the mathematical, algorithmic, and cryptographic works supporting the current article.
+The project’s reference archives collect the mathematical, algorithmic, historical, and standards sources supporting [Part 1](references/part-1.md) and [Part 2](references/part-2.md).
 
 ### Research site
 
